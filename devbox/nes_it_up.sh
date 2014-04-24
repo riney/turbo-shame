@@ -1,17 +1,14 @@
-echo.
 echo "***************"
 echo Updating system
 echo "***************"
 apt-get update
 apt-get upgrade
 
-echo.
 echo "************************"
 echo Deep frying dependencies
 echo "************************"
 apt-get -y install git-core g++ autoconf scons libsdl1.2-dev subversion libgtk-3-dev liblua5.1-0-dev
 
-echo.
 echo "***********************"
 echo Baking wla-dx assembler
 echo "***********************"
@@ -21,11 +18,10 @@ git clone https://github.com/vhelin/wla-dx.git
 cd wla-dx
 ./unix.sh 1
 
-echo.
 echo "***************"
 echo Sauteeing fceux
 echo "***************"
-cd ~/tools
+cd /home/vagrant/tools
 svn checkout http://svn.code.sf.net/p/fceultra/code/fceu/trunk fceultra
 cd fceultra/src
 wget http://sourceforge.net/p/fceultra/bugs/_discuss/thread/e458ff57/cfde/attachment/input.cpp.patch
@@ -48,13 +44,11 @@ echo "--- SConstruct	2014-04-24 22:13:21.372299371 +0000
 patch SConstruct < ./SConstruct.patch
 scons install
 
-echo.
 echo "***********************"
 echo Broasting .bash_profile
 echo "***********************"
 echo "$PATH=$PATH:/home/vagrant/tools/wla-dx/binaries" > ~/.bash_profile
 
-echo.
 echo "**************************"
 echo THE SHAME PLATE IS SERVED.
 echo "**************************"
