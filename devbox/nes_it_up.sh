@@ -25,20 +25,17 @@ rvm default use 2.1
 gem install guard
 
 echo
-echo "***********************"
-echo Baking wla-dx assembler
-echo "***********************"
+echo "****************"
+echo Baking assembler
+echo "****************"
 mkdir tools
 cd tools
-git clone https://github.com/vhelin/wla-dx.git
-cd wla-dx
-./unix.sh 1
-
-echo
-echo "***********************"
-echo Broasting .bash_profile
-echo "***********************"
-echo "$PATH=$PATH:/home/vagrant/tools/wla-dx/binaries" > ~/.bash_profile
+git clone https://github.com/cc65/cc65.git
+cd cc65
+make
+ln -s /home/vagrant/tools/cc65/bin/ca65 /usr/local/bin
+ln -s /home/vagrant/tools/cc65/bin/cl65 /usr/local/bin
+ln -s /home/vagrant/tools/cc65/bin/ld65 /usr/local/bin
 
 echo
 echo "**************************"

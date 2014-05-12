@@ -1,0 +1,32 @@
+Modules list:
+-------------
+background.o:
+    CODE              Offs=000000  Size=00005A  Align=00001  Fill=0000
+    HEADER            Offs=000000  Size=000008  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=00000C  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+HEADER                000000  000007  000008  00001
+CODE                  008000  008059  00005A  00001
+VECTORS               00FFF6  010001  00000C  00001
+
+
+Exports list by name:
+---------------------
+__STACKSIZE__             000300 REA    
+
+
+Exports list by value:
+----------------------
+__STACKSIZE__             000300 REA    
+
+
+Imports list:
+-------------
+__STACKSIZE__ ([linker generated]):
+    [linker generated]        /home/vagrant/tools/cc65/cfg/nes.cfg(27)
+
