@@ -63,7 +63,7 @@ clear_palette:
 	dex
 	bne	@loop
 
-	lda	#%10000000	; intensify blues
+	lda	#%10000000	; intensify blue
 	sta	$2001
 
 forever:

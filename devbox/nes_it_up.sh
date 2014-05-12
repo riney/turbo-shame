@@ -22,7 +22,7 @@ usermod -a -G rvm vagrant
 source /etc/profile.d/rvm.sh
 rvm install 2.1
 rvm default use 2.1
-gem install guard
+gem install guard guard-shell
 
 echo
 echo "****************"
