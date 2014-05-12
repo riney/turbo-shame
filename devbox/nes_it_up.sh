@@ -5,7 +5,7 @@ echo "*****************"
 echo Julienning system
 echo "*****************"
 apt-get update
-apt-get upgrade
+apt-get -y upgrade
 
 echo
 echo "************************"
